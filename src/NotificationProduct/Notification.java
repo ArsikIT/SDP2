@@ -1,5 +1,5 @@
 package NotificationProduct;
 
 public interface Notification {
-    void sendNotification();
+    void sendNotification();  // method sendNotification
 }

@@ -1,4 +1,5 @@
 import AdapterPackage.AdapterFactory;
+import AdapterPackage2.AdapterFactory2;
 import Factory.CleanCode2.EmailFactory;
 import Factory.CleanCode2.PushFactory;
 import Factory.CleanCode2.SmsFactory;
@@ -13,10 +14,18 @@ public class Main {
                                                                   // that is selected by changing the factory
 
 
-        NotificationFactory AdapterFactory = new AdapterFactory();  //  Adapter simply implements an already existing interface Notification
+        NotificationFactory AdapterFactory = new AdapterFactory();
         Notification telegram = AdapterFactory.createNotification();
 
-        telegram.sendNotification();
+
+
+        NotificationFactory AdapterFactory2 = new AdapterFactory2();
+        Notification instagram = AdapterFactory2.createNotification();
+
+
+        instagram.sendNotification(); // example adapter pattern 2
+
+        telegram.sendNotification();  // calling the method on the product (adapter pattern1 )
 
         notification.sendNotification();  // calling the method on the product
 
